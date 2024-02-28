@@ -1,0 +1,20 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/videostreaming
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: POSTGRESQL
+
+minio:
+  url: http://localhost:9000
+  accessKey: admin
+  secretKey: adminpassword
+  put-object-part-size: 5242880 #value in bytes (minimum is 5 MB equivalent)
